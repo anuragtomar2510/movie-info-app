@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+
+    box-sizing: border-box;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+
+    background: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+
+}
+
+.wrapper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.title {
+
+    font-family: inherit;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    
+
+}
+
+.search-bar {
+
+    background-color: #111412;
+    margin-bottom: 30px;
+    
+}
+
+.search {
+
+    font-family: inherit;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: 2px solid #111412;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    color: white;
+    outline: none;
+    text-align: center;
+    
+
+}
+
+.movie-container {
+
+    display : flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.movie {
+
+    background: #111412;
+    margin: 1rem;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position : relative;
+
+}
+
+.movie-img {
+
+    max-width: 100%;
+    height: 450px;
+    object-fit: cover;
+
+}
+
+
+
+.movie-info {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.movie-info h3 {
+
+    margin: 0;
+
+}
+
+.tag {
+
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: bold;
+
+}
+
+.movie-overview {
+
+    background : white;
+    color : black !important;
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    right : 0;
+    padding: 1rem;
+    overflow: auto;
+    max-height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transform : translateY(100%);
+    transition : transform 0.3s ease-in-out;
+
+}
+
+.movie:hover .movie-overview {
+
+    transform : translateY(0%);
+
 }
